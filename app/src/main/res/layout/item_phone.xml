@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="我的聯絡人"
+        android:textSize="16sp" />
+
+    <com.github.florent37.expansionpanel.ExpansionLayout
+        android:id="@+id/expand_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/expand_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:el_duration="400"
+        app:el_expanded="true"
+        app:el_parallax="0.5">
+
+        <LinearLayout
+            android:id="@+id/layout_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="陳曉明"
+                android:textSize="20sp" />
+
+            <com.example.notouchrecyclerview.NoTouchRecyclerView
+                android:id="@+id/recyclerView_waring"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="0912345678"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+</LinearLayout>
